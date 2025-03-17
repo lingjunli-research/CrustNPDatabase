@@ -60,17 +60,18 @@
             text-decoration: underline;
         }
     </style>
-</head>
-<body>
 
-<body id="page-top">
-    <div id="navbar-container"></div>
+        <div id="navbar-container"></div>
     <script>
         fetch("navbar.html")
             .then(response => response.text())
             .then(data => document.getElementById("navbar-container").innerHTML = data);
     </script>
     
+</head>
+<body>
+
+<body id="page-top">
 <div class="container">
     <!-- Profile Section -->
     <div class="profile">
