@@ -59,6 +59,64 @@
         .pub-link:hover {
             text-decoration: underline;
         }
+
+        /* Custom CSS for the side navbar */
+        #sideNav {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #3f007d;
+            padding-top: 20px;
+        }
+        
+        #sideNav .navbar-brand {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        #sideNav .navbar-nav {
+            width: 100%;
+        }
+        
+        #sideNav .nav-item {
+            padding: 10px 20px;
+        }
+        
+        #sideNav .nav-link {
+            color: white;
+            font-size: 16px;
+        }
+        
+        #sideNav .nav-link:hover {
+            color: #ffcc00; /* Change to your preferred hover color */
+        }
+        
+        /* Adjust the container to account for the side navbar */
+        .container {
+            margin-left: 250px; /* Match the width of the navbar */
+            padding: 20px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: flex-start; /* Align items to the top */
+            margin-bottom: 20px;
+        }
+        
+        .profile img {
+            width: 150px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px;
+            margin-right: 20px;
+            align-self: stretch; /* Make the image stretch to match the height of the text section */
+            object-fit: cover; /* Ensure the image covers the area without distortion */
+        }
+        
+        .profile-info {
+            flex: 1;
+        }
     </style>
 
     <script>
@@ -75,7 +133,10 @@
 <body>
 
 <body id="page-top">
-<div class="container">
+
+    <div id="navbar-container"></div> <!-- Navbar will be injected here -->
+
+    <div class="container">
     <!-- Profile Section -->
     <div class="profile">
         <img src="../Assets/Img/PIHeadshot.jpg" alt="Lingjun Li, Ph.D.">
