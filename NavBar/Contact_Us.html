@@ -59,56 +59,6 @@
         .pub-link:hover {
             text-decoration: underline;
         }
-
-        /* Custom CSS for the side navbar */
-        #sideNav {
-            width: 250px; /* Fixed width for the navbar */
-            height: 100vh; /* Full height of the viewport */
-            position: fixed; /* Fix the navbar to the left */
-            top: 0;
-            left: 0;
-            background-color: #2a2541; /* Navbar background color */
-            overflow-y: auto; /* Allow scrolling if content overflows */
-            padding: 20px;
-            box-sizing: border-box; /* Include padding in the width */
-        }
-        
-        /* Logo Styles */
-        #sideNav .navbar-brand img {
-            width: 100%; /* Make the logo responsive within the navbar */
-            max-width: 250px; /* Limit the maximum width of the logo */
-            height: auto; /* Maintain aspect ratio */
-            display: block;
-            margin: 0 auto; /* Center the logo horizontally */
-        }
-        
-        /* Navbar Links */
-        #sideNav .navbar-nav {
-            margin-top: 20px; /* Add space between logo and links */
-        }
-        
-        #sideNav .nav-item {
-            margin-bottom: 10px; /* Add space between links */
-        }
-        
-        #sideNav .nav-link {
-            color: white; /* Link text color */
-            font-size: 16px;
-            padding: 10px 15px; /* Add padding to links */
-            border-radius: 5px; /* Rounded corners for links */
-        }
-        
-        #sideNav .nav-link:hover {
-            background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
-            color: #ffcc00; /* Hover text color */
-        }
-        
-        /* Adjust the container to account for the side navbar */
-        .container {
-            margin-left: 250px; /* Match the width of the navbar */
-            padding: 20px;
-        }
-
         .profile {
             display: flex;
             align-items: flex-start; /* Align items to the top */
@@ -143,9 +93,10 @@
 <body>
 
 <body id="page-top">
-
+    <!-- Navbar Container (Will be loaded dynamically) -->
     <div id="navbar-container"></div> <!-- Navbar will be injected here -->
 
+    <!-- Main Content (Pushed Right) -->
     <div class="container">
     <!-- Profile Section -->
     <div class="profile">
