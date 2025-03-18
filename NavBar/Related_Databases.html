@@ -12,15 +12,12 @@
     <!-- Core theme CSS (includes Bootstrap) -->
     <link href="styles.css" rel="stylesheet" />
 
-    <style>
-body {
+  <style>
+        body {
             font-family: Arial, sans-serif;
             background-color: #dadaeb; /* Light purple background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            padding: 0;
         }
 
         /* Navbar Styles */
@@ -69,30 +66,37 @@ body {
             max-width: 1100px;
         }
 
-        .database-box {
-            border: 2px solid #000;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            width: 300px;
-        }
-        .database-box table {
+        /* Table Styles */
+        .database-table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 20px;
         }
-        .database-box th, .database-box td {
-            padding: 10px;
+
+        .database-table th, .database-table td {
+            padding: 12px;
             text-align: left;
             border-bottom: 1px solid #ddd;
         }
-        .database-box th {
-            background-color: #f2f2f2;
+
+        .database-table th {
+            background-color: #9e9ac8;
+            font-weight: bold;
         }
-        .database-box tr:last-child td {
-            border-bottom: none;
+
+        .database-table tr:hover {
+            background-color: #f5f5f5;
         }
-</style>
+
+        .database-table a {
+            color: #9e9ac8;
+            text-decoration: none;
+        }
+
+        .database-table a:hover {
+            text-decoration: underline;
+        }
+    </style>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -110,10 +114,9 @@ body {
 <div id="navbar-container"></div>
 
 <!-- Main Content -->
-  <h2>Accessible Neuropeptide Databases</h2>
-
-<div class="database-box">
-    <table>
+<div class="container">
+    <h2>Accessible Neuropeptide Databases</h2>
+    <table class="database-table">
         <thead>
             <tr>
                 <th>Website</th>
@@ -123,20 +126,21 @@ body {
         </thead>
         <tbody>
             <tr>
-                <td><a href="https://neuropeptides.nl</a></td>
+                <td><a href="https://neuropeptides.nl">neuropeptides.nl</a></td>
                 <td>20xx</td>
                 <td>The Neuropeptide Database is the internet resource to data about all known neuropeptides, their genes, precursors and expression in the brain</td>
             </tr>
             <tr>
-                <td><a href="http://isyslab.info/NeuroPep</a>/</td>
+                <td><a href="http://isyslab.info/NeuroPep">NeuroPep</a></td>
                 <td>2015</td>
-                <td>NeuroPep holds 5949 non-redundant neuropeptide entries originating from 493 organisms belonging to 65 neuropeptide families. </td>
+                <td>NeuroPep holds 5949 non-redundant neuropeptide entries originating from 493 organisms belonging to 65 neuropeptide families.</td>
             </tr>
             <tr>
                 <td>Neuropepdia</td>
                 <td>20xx</td>
                 <td>abcxyz</td>
             </tr>
+            <!-- Add more rows here as needed -->
         </tbody>
     </table>
 </div>
