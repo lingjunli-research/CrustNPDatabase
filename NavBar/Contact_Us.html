@@ -48,26 +48,7 @@
         .email {
             color: #29004c;
             font-weight: bold;
-        }
-        .publications {
-            margin-top: 30px;
-        }
-        .publications h2 {
-            font-size: 20px;
-            font-weight: bold;
-        }
         
-        .pub-link {
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .pub-link[href*="pubmed"] {
-            color: red;
-        }
-
-        .pub-link:hover {
-            text-decoration: underline;
-        }
         .profile {
             display: flex;
             align-items: flex-start; /* Align items to the top */
@@ -136,23 +117,24 @@
         .container {
             margin-left: 250px; /* Match the width of the navbar */
             padding: 20px; /* Add padding for better spacing */
-            max-width: 800px; /* Limit the width of the main content */
+            max-width: 1100px; /* Limit the width of the main content */
         }
 
         /* papers Section */
-        .papers-section {
-            margin-top: 40px;
-        }
         
+            
+         
         .papers-section h2 {
             color: #29004c; /* Dark purple color */
             margin-bottom: 20px;
         }
         
-        .papers-grid {
+        .papers-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            grid-template-columns: repeat(2, 1fr); /* Two-column layout */
             gap: 20px; /* Space between items */
+            max-width: 1100px;
+            margin: auto;
         }
         
         .paper-item {
