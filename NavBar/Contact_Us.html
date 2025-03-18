@@ -62,35 +62,45 @@
 
         /* Custom CSS for the side navbar */
         #sideNav {
-            width: 250px;
-            height: 100vh;
-            position: fixed;
+            width: 250px; /* Fixed width for the navbar */
+            height: 100vh; /* Full height of the viewport */
+            position: fixed; /* Fix the navbar to the left */
             top: 0;
             left: 0;
-            background-color: #3f007d;
-            padding-top: 20px;
-        }
-        
-        #sideNav .navbar-brand {
+            background-color: #2a2541; /* Navbar background color */
+            overflow-y: auto; /* Allow scrolling if content overflows */
             padding: 20px;
-            text-align: center;
+            box-sizing: border-box; /* Include padding in the width */
         }
         
+        /* Logo Styles */
+        #sideNav .navbar-brand img {
+            width: 100%; /* Make the logo responsive within the navbar */
+            max-width: 250px; /* Limit the maximum width of the logo */
+            height: auto; /* Maintain aspect ratio */
+            display: block;
+            margin: 0 auto; /* Center the logo horizontally */
+        }
+        
+        /* Navbar Links */
         #sideNav .navbar-nav {
-            width: 100%;
+            margin-top: 20px; /* Add space between logo and links */
         }
         
         #sideNav .nav-item {
-            padding: 10px 20px;
+            margin-bottom: 10px; /* Add space between links */
         }
         
         #sideNav .nav-link {
-            color: white;
+            color: white; /* Link text color */
             font-size: 16px;
+            padding: 10px 15px; /* Add padding to links */
+            border-radius: 5px; /* Rounded corners for links */
         }
         
         #sideNav .nav-link:hover {
-            color: #ffcc00; /* Change to your preferred hover color */
+            background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
+            color: #ffcc00; /* Hover text color */
         }
         
         /* Adjust the container to account for the side navbar */
