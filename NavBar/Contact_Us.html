@@ -86,34 +86,37 @@
             flex: 1;
         }
         /* Navbar Styles */
-        #sideNav {
-            width: 250px; /* Fixed width for the navbar */
-            height: 100vh; /* Full height of the viewport */
-            position: fixed; /* Fix the navbar to the left */
-            top: 0;
-            left: 0;
-            background-color: #2a2541; /* Navbar background color */
-            overflow-y: auto; /* Allow scrolling if content overflows */
-            padding: 20px;
-            box-sizing: border-box; /* Include padding in the width */
+       #sideNav {
+        width: 250px; /* Fixed width for the navbar */
+        height: 100vh; /* Full height of the viewport */
+        position: fixed; /* Fix the navbar to the left */
+        top: 0;
+        left: 0;
+        background-color: #2a2541; /* Navbar background color */
+        overflow-y: auto; /* Allow scrolling if content overflows */
+        padding: 20px;
+        box-sizing: border-box; /* Include padding in the width */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         }
         
         /* Logo Styles */
         #sideNav .navbar-brand img {
-            width: 100%; /* Make the logo responsive within the navbar */
-            max-width: 200px; /* Limit the maximum width of the logo */
+            width: 150px; /* Adjust the width of the logo */
             height: auto; /* Maintain aspect ratio */
-            display: block;
-            margin: 0 auto; /* Center the logo horizontally */
+            margin-bottom: 20px; /* Space below the logo */
         }
         
         /* Navbar Links */
         #sideNav .navbar-nav {
+            width: 100%;
             margin-top: 20px; /* Add space between logo and links */
         }
         
         #sideNav .nav-item {
-            margin-bottom: 10px; /* Add space between links */
+            margin-bottom: 15px; /* Add space between links */
         }
         
         #sideNav .nav-link {
