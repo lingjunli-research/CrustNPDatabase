@@ -115,51 +115,56 @@
         .database-table td:nth-child(2) {
             text-align: center;
         }
-      /* Resources Section */
+     /* Resources Section */
         .resources-section {
             margin-top: 40px;
         }
-
+        
         .resources-section h2 {
             color: #29004c; /* Dark purple color */
             margin-bottom: 20px;
         }
-
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 20px; /* Space between items */
+        }
+        
         .resource-item {
             display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            padding: 20px;
+            flex-direction: column;
             background-color: #9e9ac8;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
         }
-
+        
         .resource-item img {
-            width: 100px;
-            height: 100px;
-            margin-right: 20px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
-
-        .resource-item .content {
-            flex: 1;
-        }
-
+        
         .resource-item h3 {
             margin: 0 0 10px;
             color: #29004c; /* Dark purple color */
         }
-
+        
         .resource-item p {
-            margin: 0 0 10px;
+            margin: 0 0 15px;
             color: #555;
+            flex: 1; /* Ensures the summary takes up remaining space */
         }
-
+        
         .resource-item .buttons {
             display: flex;
+            justify-content: center;
             gap: 10px;
         }
-
+        
         .resource-item .buttons a {
             padding: 8px 16px;
             border-radius: 5px;
@@ -168,11 +173,10 @@
             background-color: #29004c; /* Button color */
             transition: background-color 0.3s;
         }
-
+        
         .resource-item .buttons a:hover {
             background-color: #7c78a8; /* Darker button color on hover */
         }
-
     </style>
 
     <script>
@@ -221,35 +225,30 @@
         </tbody>
     </table>
 <!-- Resources for Neuropeptide Research Section -->
-    <div class="resources-section">
-        <h2>Resources for Neuropeptide Research</h2>
-        
+<div class="resources-section">
+    <h2>Resources for Neuropeptide Research</h2>
+    <div class="resources-grid">
         <!-- Resource Item 1 -->
         <div class="resource-item">
             <img src="../Assets/Publication - Resource TOC/Endogenius TOC.png" alt="TOC Endogenius">
-            <div class="content">
-                <h3>Endogenius</h3>
-                <p>EndoGenius, a database searching strategy designed specifically for elucidating neuropeptide identifications from mass spectra by leveraging optimized peptide–spectrum matching approaches, an expansive motif database, and a novel scoring algorithm to achieve broader representation of the neuropeptidome and minimize reidentification.</p>
-                <div class="buttons">
-                    <a href="https://pubs.acs.org/doi/full/10.1021/acs.jproteome.3c00758">Read More</a>
-                    <a href="https://github.com/lingjunli-research/EndoGenius">Explore</a>
-                </div>
+            <h3>Endogenius</h3>
+            <p>EndoGenius, a database searching strategy designed specifically for elucidating neuropeptide identifications from mass spectra by leveraging optimized peptide–spectrum matching approaches, an expansive motif database, and a novel scoring algorithm to achieve broader representation of the neuropeptidome and minimize reidentification.</p>
+            <div class="buttons">
+                <a href="https://pubs.acs.org/doi/full/10.1021/acs.jproteome.3c00758">Read More</a>
+                <a href="https://github.com/lingjunli-research/EndoGenius">Explore</a>
             </div>
         </div>
 
         <!-- Resource Item 2 -->
         <div class="resource-item">
             <img src="../Assets/Publication - Resource TOC/MotifQuest TOC.jpeg" alt="TOC MotifQuest">
-            <div class="content">
-                <h3>MotifQuest</h3>
-                <p>MotifQuest, our novel motif database generation algorithm, is designed to work in partnership with EndoGenius, a program optimized for database searching of endogenous peptides and that is powered by a motif database to capitalize on biological context to produce identifications. MotifQuest aims to quickly develop motif databases without any prior knowledge, a laborious task not possible with traditional sequence alignment resources.</p>
-                <div class="buttons">
-                    <a href="https://pubs.acs.org/doi/10.1021/jasms.4c00192">Read More</a>
-                    <a href="https://github.com/lingjunli-research/MotifQuest/blob/main/README.md">Explore</a>
-                </div>
+            <h3>MotifQuest</h3>
+            <p>MotifQuest, our novel motif database generation algorithm, is designed to work in partnership with EndoGenius, a program optimized for database searching of endogenous peptides and that is powered by a motif database to capitalize on biological context to produce identifications. MotifQuest aims to quickly develop motif databases without any prior knowledge, a laborious task not possible with traditional sequence alignment resources.</p>
+            <div class="buttons">
+                <a href="https://pubs.acs.org/doi/10.1021/jasms.4c00192">Read More</a>
+                <a href="https://github.com/lingjunli-research/MotifQuest/blob/main/README.md">Explore</a>
             </div>
         </div>
-
         <!-- Add more resource items here as needed -->
     </div>
 </div>
