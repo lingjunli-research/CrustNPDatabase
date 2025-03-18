@@ -3989,14 +3989,31 @@ input[type=button].btn-block {
   display: block;
 }
 
-.navbar {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
+/* Fix sidebar position */
+#sideNav {
+    width: 250px; /* Sidebar width */
+    height: 100vh; /* Full height */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2a2541; /* Purple background */
+    overflow-x: hidden;
+    padding-top: 20px;
+    z-index: 1000;
 }
+
+/* Navbar content in a column layout */
+#navbarSupportedContent {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Push main content to the right */
+.container {
+    margin-left: 270px; /* Adjusted to fit sidebar width */
+    padding: 20px;
+}
+
 .navbar .container,
 .navbar .container-fluid,
 .navbar .container-sm,
