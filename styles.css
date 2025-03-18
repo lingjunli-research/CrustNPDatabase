@@ -3989,14 +3989,14 @@ input[type=button].btn-block {
   display: block;
 }
 
-/* Fix sidebar position */
+/* Ensure Sidebar Navbar Stays on Left */
 #sideNav {
-    width: 250px; /* Sidebar width */
+    width: 250px; /* Adjust sidebar width */
     height: 100vh; /* Full height */
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #2a2541; /* Purple background */
+    background-color: #2a2541; /* Consistent background color */
     overflow-x: hidden;
     padding-top: 20px;
     z-index: 1000;
@@ -4008,11 +4008,12 @@ input[type=button].btn-block {
     flex-direction: column;
 }
 
-/* Push main content to the right */
+/* Push main content to the right so it doesn't overlap */
 .container {
-    margin-left: 270px; /* Adjusted to fit sidebar width */
+    margin-left: 270px; /* Ensure content shifts to the right */
     padding: 20px;
 }
+
 
 .navbar .container,
 .navbar .container-fluid,
