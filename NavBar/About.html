@@ -63,7 +63,6 @@
             margin-left: 270px; /* Pushes content to the right */
             padding: 40px 20px;
             max-width: 1100px;
-            background: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -100,41 +99,11 @@
         .section {
             margin-bottom: 30px;
         }
-
-        .species-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .species-item {
-            background: #9e9ac8;
-            color: white;
-            padding: 15px;
-            border-radius: 5px;
-            flex: 1 1 250px;
-            text-align: center;
+       .email {
+            color: #29004c;
             font-weight: bold;
         }
 
-        .cta {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .cta a {
-            display: inline-block;
-            background-color: #29004c;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .cta a:hover {
-            background-color: #7c78a8;
-        }
     </style>
  <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -157,13 +126,13 @@
     <h1>About CNPD - Crustacean Neuropeptide Database</h1>
 
     <div class="section">
-        <h2>🔬 Overview</h2>
+        <h2>Overview</h2>
         <p>The current release of <span class="highlight">CNPD (Version 1.0, 2025)</span> contains <span class="highlight">[X]</span> curated neuropeptide entries from <span class="highlight">[Y]</span> crustacean species, organized into <span class="highlight">[Z]</span> neuropeptide families.</p>
         <p>Data is manually curated from peer-reviewed literature, mass spectrometry-based peptidomics, and public protein databases such as <b>UniProt</b> and <b>NCBI</b>.</p>
     </div>
 
     <div class="section">
-        <h2>📊 What CNPD Provides</h2>
+        <h2>What CNPD Provides</h2>
         <ul>
             <li>Neuropeptide sequence (FASTA format)</li>
             <li>Species taxonomy & homology</li>
@@ -179,68 +148,64 @@
     </div>
 
     <div class="section">
-        <h2>🧩 Database Features & Tools</h2>
+        <h2>Database Features & Tools</h2>
         <ul>
-            <li>🔍 <b>Flexible Search Engine</b> – Find neuropeptides by name, sequence, family, or function.</li>
-            <li>📊 <b>Comparative Peptide Analysis</b> – Compare neuropeptide sequences across crustacean species.</li>
-            <li>🧬 <b>Sequence Alignment & Homology Search</b> – Identify conserved motifs and sequence similarities.</li>
-            <li>🧪 <b>Mass Spectrometry Data Integration</b> – Explore MS-validated peptides and spectral evidence.</li>
-            <li>🛠 <b>Peptide Property Calculator</b> – Compute GRAVY scores, hydrophobicity, half-life, 3D structures, and more.</li>
+            <li><b>Flexible Search Engine</b> – Find neuropeptides by name, sequence, family, or function.</li>
+            <li><b>Comparative Peptide Analysis</b> – Compare neuropeptide sequences across crustacean species.</li>
+            <li><b>Sequence Alignment & Homology Search</b> – Identify conserved motifs and sequence similarities.</li>
+            <li><b>Mass Spectrometry Data Integration</b> – Explore MS-validated peptides and spectral evidence.</li>
+            <li><b>Peptide Property Calculator</b> – Compute GRAVY scores, hydrophobicity, half-life, 3D structures, and more.</li>
         </ul>
     </div>
 
     <div class="section">
-        <h2>📍 Crustacean Species Covered</h2>
-        <div class="species-list">
-            <div class="species-item">🦞 <i>Homarus americanus</i> (American Lobster)</div>
-            <div class="species-item">🦀 <i>Callinectes sapidus</i> (Blue Crab)</div>
-            <div class="species-item">🦀 <i>Cancer borealis</i> (Jonah Crab)</div>
-            <div class="species-item">🦐 <i>Litopenaeus vannamei</i> (Pacific White Shrimp)</div>
-            <div class="species-item">🦐 <i>Pandalus borealis</i> (Northern Shrimp)</div>
-        </div>
+        <h2>Crustacean Species Covered</h2>
+        <ul>
+            <li><i>Homarus americanus</i> (American Lobster)</li>
+            <li><i>Callinectes sapidus</i> (Blue Crab)</li>
+            <li><i>Cancer borealis</i> (Jonah Crab)</li>
+            <li><i>Litopenaeus vannamei</i> (Pacific White Shrimp)</li>
+            <li><i>Pandalus borealis</i> (Northern Shrimp)</li>
+        </ul>
     </div>
 
     <div class="section">
-        <h2>🔗 Data Sources & Curation</h2>
+        <h2> Data Sources & Curation</h2>
         <ul>
-            <li>📄 <b>Experimental Data</b> – Mass spectrometry & neuropeptide bioassays</li>
-            <li>📚 <b>Literature Mining</b> – Curated from PubMed & primary research papers</li>
-            <li>🗂 <b>Public Databases</b> – Cross-linked with UniProt, NCBI, and NeuroPep</li>
-            <li>🧪 <b>Computational Predictions</b> – Sequence-based neuropeptide identification</li>
+            <li><b>Experimental Data</b> – Mass spectrometry & neuropeptide bioassays</li>
+            <li><b>Literature Mining</b> – Curated from PubMed & primary research papers</li>
+            <li><b>Public Databases</b> – Cross-linked with UniProt, NCBI, and NeuroPep</li>
+            <li><b>Computational Predictions</b> – Sequence-based neuropeptide identification</li>
         </ul>
         <p>Every neuropeptide entry undergoes <b>manual examination</b> to ensure accuracy and reliability.</p>
     </div>
 
     <div class="section">
-        <h2>📢 Get Involved & Contribute</h2>
+        <h2>Get Involved & Contribute</h2>
         <ul>
-            <li>✔️ Submit new neuropeptide sequences</li>
-            <li>✔️ Report missing or updated annotations</li>
-            <li>✔️ Share mass spectrometry datasets</li>
-            <li>✔️ Suggest additional features or improvements</li>
+            <li>Submit new neuropeptide sequences</li>
+            <li>Report missing or updated annotations</li>
+            <li>Share mass spectrometry datasets</li>
+            <li>Suggest additional features or improvements</li>
         </ul>
-        <p>For collaborations, submissions, or feedback, please contact <b>Dr. Lingjun Li</b>.</p>
+        <p>For collaborations, submissions, or feedback, please contact <a href="mailto:lingjun.li@wisc.edu" class="email">Dr. Lingjun Li</a>.</p>
     </div>
 
     <div class="section">
-        <h2>📜 Citation & Funding</h2>
+        <h2>Citation & Funding</h2>
         <p>If you use CNPD in your research, please cite:</p>
         <p><b>Crustacean Neuropeptide Database (CNPD): A curated resource for neuropeptide research in crustacean species.</b> [Authors]. [Journal Name], [Year]. DOI: [XXXX].</p>
         <p><b>Funding:</b> This work is supported by [Funding Agencies].</p>
     </div>
 
     <div class="section">
-        <h2>🚀 Future Updates</h2>
+        <h2>Future Updates</h2>
         <ul>
-            <li>🔹 Expansion to more crustacean species</li>
-            <li>🔹 Enhanced peptide discovery tools</li>
-            <li>🔹 Improved mass spectrometry integration</li>
-            <li>🔹 User-submitted experimental data uploads</li>
+            <li>Expansion to more crustacean species</li>
+            <li>Enhanced peptide discovery tools</li>
+            <li>Improved mass spectrometry integration</li>
+            <li>User-submitted experimental data uploads</li>
         </ul>
-    </div>
-
-    <div class="cta">
-        <a href="#">Explore CNPD</a>
     </div>
 
 </div>
