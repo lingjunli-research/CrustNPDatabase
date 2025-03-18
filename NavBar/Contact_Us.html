@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lingjun Li, Ph.D.</title>
+    <!-- Font Awesome icons (free version) -->
+    <script src="https://kit.fontawesome.com/363bd5a7c4.js" crossorigin="anonymous"></script>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap) -->
+    <link href="styles.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="styles.css"> <!-- External CSS for styling -->
     <style>
         body {
@@ -76,6 +84,53 @@
         
         .profile-info {
             flex: 1;
+        }
+        /* Navbar Styles */
+        #sideNav {
+            width: 250px; /* Fixed width for the navbar */
+            height: 100vh; /* Full height of the viewport */
+            position: fixed; /* Fix the navbar to the left */
+            top: 0;
+            left: 0;
+            background-color: #2a2541; /* Navbar background color */
+            overflow-y: auto; /* Allow scrolling if content overflows */
+            padding: 20px;
+            box-sizing: border-box; /* Include padding in the width */
+        }
+        
+        /* Logo Styles */
+        #sideNav .navbar-brand img {
+            width: 100%; /* Make the logo responsive within the navbar */
+            max-width: 200px; /* Limit the maximum width of the logo */
+            height: auto; /* Maintain aspect ratio */
+            display: block;
+            margin: 0 auto; /* Center the logo horizontally */
+        }
+        
+        /* Navbar Links */
+        #sideNav .navbar-nav {
+            margin-top: 20px; /* Add space between logo and links */
+        }
+        
+        #sideNav .nav-item {
+            margin-bottom: 10px; /* Add space between links */
+        }
+        
+        #sideNav .nav-link {
+            color: white; /* Link text color */
+            font-size: 16px;
+            padding: 10px 15px; /* Add padding to links */
+            border-radius: 5px; /* Rounded corners for links */
+        }
+        
+        #sideNav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
+            color: #ffcc00; /* Hover text color */
+        }
+        .container {
+            margin-left: 250px; /* Match the width of the navbar */
+            padding: 20px; /* Add padding for better spacing */
+            max-width: 800px; /* Limit the width of the main content */
         }
     </style>
 
