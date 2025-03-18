@@ -63,7 +63,7 @@
         .container {
             margin-left: 270px; /* Pushes content to the right */
             padding: 40px 20px;
-            max-width: 1200px;
+            max-width: 1100px;
         }
 
         /* FAQ Grid Layout */
@@ -71,7 +71,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr); /* Three-column layout */
             gap: 20px; /* Space between items */
-            max-width: 1200px;
+            max-width: 1100px;
             margin: auto;
         }
 
@@ -88,7 +88,7 @@
         /* Number + Question Container */
         .faq-header {
             display: flex;
-            align-items: center;
+            align-items: flex-start; /* Align to top */
             gap: 10px; /* Space between number and text */
             margin-bottom: 10px;
         }
@@ -96,7 +96,6 @@
             font-size: 32px;
             font-weight: bold;
             color: black;
-            position: absolute;
             flex-shrink: 0; /* Prevents it from resizing */
         }
 
@@ -104,9 +103,10 @@
             font-size: 18px;
             font-weight: bold;
             color: #3f007d
-            border-bottom: 3px solid black;
+            border-bottom: 3px solid black;/* Add the black line */
             flex-grow: 1; /* Allows text to take up available space */
             padding-bottom: 5px;
+            display: inline-block;
         }
 
         .faq-answer {
