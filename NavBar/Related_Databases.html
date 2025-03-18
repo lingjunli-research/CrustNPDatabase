@@ -16,8 +16,11 @@
 body {
             font-family: Arial, sans-serif;
             background-color: #dadaeb; /* Light purple background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
         }
 
         /* Navbar Styles */
@@ -66,19 +69,29 @@ body {
             max-width: 1100px;
         }
 
-        table {
+        .database-box {
+            border: 2px solid #000;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 300px;
+        }
+        .database-box table {
             width: 100%;
             border-collapse: collapse;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
+        .database-box th, .database-box td {
+            padding: 10px;
             text-align: left;
+            border-bottom: 1px solid #ddd;
         }
-        th {
+        .database-box th {
             background-color: #f2f2f2;
         }
-      
+        .database-box tr:last-child td {
+            border-bottom: none;
+        }
 </style>
 
     <script>
@@ -99,37 +112,34 @@ body {
 <!-- Main Content -->
   <h2>Accessible Neuropeptide Databases</h2>
 
-<table>
-    <thead>
-        <tr>
-            <th>Website</th>
-            <th>Database Description</th>
-            <th>Year Published</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><a href="http://www.peptaibols.org">Peptaibols</a></td>
-            <td>A collection of peptaibols</td>
-            <td>2003, 2004</td>
-        </tr>
-        <tr>
-            <td><a href="http://aps.unmc.edu/AP">APD</a></td>
-            <td>The original antimicrobial peptide database for anticancer, antibacterial, antifungal, antiviral, anti-HIV, antiparasitic, antidiabetic, wound healing peptides and beyond</td>
-            <td>2004, 2009, 2016, 2020, 2022</td>
-        </tr>
-        <tr>
-            <td><a href="http://apps.sanbi.ac.za/dampd">DAMPD (formerly ANTIMIC)</a></td>
-            <td>Dragon database for antimicrobial sequences</td>
-            <td>2004, 2012</td>
-        </tr>
-        <tr>
-            <td><a href="http://www.cybase.org.au">Cybase</a></td>
-            <td>The database of audio samples</td>
-            <td>2006, 2008</td>
-        </tr>
-    </tbody>
-</table>
+<div class="database-box">
+    <table>
+        <thead>
+            <tr>
+                <th>Website</th>
+                <th>Year Published</th>
+                <th>Database Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://neuropeptides.nl</a></td>
+                <td>20xx</td>
+                <td>The Neuropeptide Database is the internet resource to data about all known neuropeptides, their genes, precursors and expression in the brain</td>
+            </tr>
+            <tr>
+                <td><a href="http://isyslab.info/NeuroPep</a>/</td>
+                <td>2015</td>
+                <td>NeuroPep holds 5949 non-redundant neuropeptide entries originating from 493 organisms belonging to 65 neuropeptide families. </td>
+            </tr>
+            <tr>
+                <td>Neuropepdia</td>
+                <td>20xx</td>
+                <td>abcxyz</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 </body>
 </html>
