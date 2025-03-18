@@ -57,13 +57,119 @@
         #sideNav .nav-link:hover {
             background-color: rgba(255, 255, 255, 0.1);
             color: #ffcc00;
-        }
-        /* Heading Styling */
-        h2 {
-            color: #29004c; /* Dark purple color */
-            text-align: center;
+
         }
         .container {
             margin-left: 270px; /* Pushes content to the right */
             padding: 40px 20px;
             max-width: 1100px;
+
+        .glossary-category {
+            margin-bottom: 40px;
+        }
+
+        .glossary-category h2 {
+            color: #29004c; /* Dark purple color */
+            border-bottom: 2px solid #29004c;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .glossary-item {
+            margin-bottom: 15px;
+        }
+
+        .glossary-item .word {
+            font-weight: bold;
+            color: #29004c; /* Dark purple color */
+        }
+
+        .glossary-item .definition {
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .glossary-item .separator {
+            border-bottom: 1px solid #ddd;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Species Category -->
+    <div class="glossary-category" id="species">
+        <h2>Species</h2>
+        <div class="glossary-list"></div>
+    </div>
+
+    <!-- Neuropeptide Family Category -->
+    <div class="glossary-category" id="neuropeptide-family">
+        <h2>Neuropeptide Family</h2>
+        <div class="glossary-list"></div>
+    </div>
+
+    <!-- Add more categories as needed -->
+
+    <script>
+        // Glossary data
+        const glossaryData = {
+            species: [
+                { word: "H. americanus", definition: "<i>Homarus americanus/<i> The American lobster, a model organism for neuropeptide studies." },
+                { word: "D. melanogaster", definition: "<i>Drosophila melanogaster/<i>The common fruit fly, widely used in genetic and neuropeptide research." },
+                { word: "C. elegans", definition: "<i>Caenorhabditis elegans/<i> A nematode used as a model organism in biological research." }
+            ],
+            neuropeptideFamily: [
+                { word: "Allatostatin", definition: "A family of neuropeptides that regulate juvenile hormone biosynthesis." },
+                { word: "FMRFamide", definition: "A neuropeptide involved in muscle contraction and neurotransmission." },
+                { word: "Tachykinin", definition: "A family of neuropeptides involved in pain perception and inflammation." }
+            ] 
+        };
+
+        // Function to sort glossary items alphabetically
+        function sortGlossary(data) {
+            return data.sort((a, b) => a.word.localeCompare(b.word));
+        }
+
+        // Function to render glossary items
+        function renderGlossary(categoryId, data) {
+            const container = document.querySelector(`#${categoryId} .glossary-list`);
+            const sortedData = sortGlossary(data);
+
+            sortedData.forEach(item => {
+                const itemDiv = document.createElement("div");
+                itemDiv.className = "glossary-item";
+
+                const wordDiv = document.createElement("div");
+                wordDiv.className = "word";
+                wordDiv.textContent = item.word;
+
+                const definitionDiv = document.createElement("div");
+                definitionDiv.className = "definition";
+                definitionDiv.textContent = item.definition;
+
+                const separatorDiv = document.createElement("div");
+                separatorDiv.className = "separator";
+
+                itemDiv.appendChild(wordDiv);
+                itemDiv.appendChild(definitionDiv);
+                itemDiv.appendChild(separatorDiv);
+
+                container.appendChild(itemDiv);
+            });
+        }
+
+        // Render glossary for each category
+        renderGlossary("species", glossaryData.species);
+        renderGlossary("neuropeptide-family", glossaryData.neuropeptideFamily);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+            
