@@ -141,11 +141,21 @@
             text-align: center;
         }
         
-        .resource-item img {
-            width: 100%;
-            height: auto;
+        /* White background block for TOC images */
+        .resource-item .toc-container {
+            background-color: white;
             border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-bottom: 15px;
+        }
+        
+        .resource-item img {
+            max-width: 100%; /* Ensure image fits within the container */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px;
         }
         
         .resource-item h3 {
@@ -230,7 +240,9 @@
     <div class="resources-grid">
         <!-- Resource Item 1 -->
         <div class="resource-item">
-            <img src="../Assets/Publication - Resource TOC/Endogenius TOC.png" alt="TOC Endogenius">
+            <div class="toc-container">
+                <img src="../Assets/Publication - Resource TOC/Endogenius TOC.png" alt="TOC Endogenius">
+            </div>
             <h3>Endogenius</h3>
             <p>EndoGenius, a database searching strategy designed specifically for elucidating neuropeptide identifications from mass spectra by leveraging optimized peptide–spectrum matching approaches, an expansive motif database, and a novel scoring algorithm to achieve broader representation of the neuropeptidome and minimize reidentification.</p>
             <div class="buttons">
@@ -241,7 +253,9 @@
 
         <!-- Resource Item 2 -->
         <div class="resource-item">
-            <img src="../Assets/Publication - Resource TOC/MotifQuest TOC.jpeg" alt="TOC MotifQuest">
+            <div class="toc-container">
+                <img src="../Assets/Publication - Resource TOC/MotifQuest TOC.jpeg" alt="TOC MotifQuest">
+            </div>
             <h3>MotifQuest</h3>
             <p>MotifQuest, our novel motif database generation algorithm, is designed to work in partnership with EndoGenius, a program optimized for database searching of endogenous peptides and that is powered by a motif database to capitalize on biological context to produce identifications. MotifQuest aims to quickly develop motif databases without any prior knowledge, a laborious task not possible with traditional sequence alignment resources.</p>
             <div class="buttons">
@@ -249,6 +263,7 @@
                 <a href="https://github.com/lingjunli-research/MotifQuest/blob/main/README.md">Explore</a>
             </div>
         </div>
+
         <!-- Add more resource items here as needed -->
     </div>
 </div>
