@@ -42,4 +42,17 @@
             </ul>
         </div>
     </nav>
+
+<div id="readme-container"></div>
+
+<script>
+    fetch('README.md')
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById("readme-container").innerHTML =
+                `<pre style="white-space: pre-wrap;">${text}</pre>`;
+        })
+        .catch(error => console.log('Error loading README.md:', error));
+</script>
+
 </body>>
