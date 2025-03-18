@@ -80,7 +80,6 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
-            position: relative;
             display: flex;
             flex-direction: column;
         }
@@ -90,28 +89,33 @@
             display: flex;
             align-items: flex-start; /* Align to top */
             gap: 10px; /* Space between number and text */
-            margin-bottom: 10px;
+            min-height: 70px; /* Makes all question headers the same height */
         }
         .faq-number {
-            font-size: 32px;
+            font-size: 50px;
             font-weight: bold;
             color: black;
             flex-shrink: 0; /* Prevents it from resizing */
         }
 
+
+        /* FAQ Question Wrapper (Ensures Line Appears) */
+        .faq-question-wrapper {
+            display: block;
+            width: 100%;
+            border-bottom: 3px solid black; /* Add the black line */
+            padding-bottom: 5px;
+        }
         .faq-question {
             font-size: 18px;
             font-weight: bold;
             color: #3f007d
-            border-bottom: 3px solid black;/* Add the black line */
-            flex-grow: 1; /* Allows text to take up available space */
-            padding-bottom: 5px;
-            display: inline-block;
         }
 
         .faq-answer {
             font-size: 14px;
             color: #333;
+            margin-top: 10px; /* Add space between question and answer */
         }
 
         .faq-answer a {
