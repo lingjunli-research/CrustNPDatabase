@@ -1,5 +1,5 @@
 
-![CNPD Logo](https://github.com/huongtran182/CrustNPDatabase2/blob/main/Assets/Img/CNPD_Banner.png)
+![CNPD Logo](![CNPD Logo](https://raw.githubusercontent.com/huongtran182/CrustNPDatabase2/main/Assets/Img/CNPD_Banner.png)
 
 ## Welcome to CNPD: The Crustacean Neuropeptide Database
 
