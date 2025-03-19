@@ -44,16 +44,26 @@
         </div>
     </nav>
 
-<div id="readme-content">Loading README...</div>
+        <div id="readme-container"></div>
 
-    <script>
-        fetch('README.md')  // Fetch README.md from the same directory
-            .then(response => response.text())
-            .then(markdown => {
-                var converter = new showdown.Converter();
-                document.getElementById("readme-content").innerHTML = converter.makeHtml(markdown);
-            })
-            .catch(error => console.error("Error loading README:", error));
-    </script>
+<script>
+    async function loadReadme() {
+        const response = await fetch('README.md');
+        const markdownText = await response.text();
+
+        // Convert Markdown to HTML using a parser
+        const converter = new showdown.Converter();
+        const htmlContent = converter.makeHtml(markdownText);
+
+        // Inject the HTML into the page
+        document.getElementById('readme-container').innerHTML = htmlContent;
+    }
+
+    loadReadme();
+</script>
+<!-- Load Showdown Markdown Parser -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+
+
 
 </body>>
