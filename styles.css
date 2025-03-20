@@ -47,7 +47,7 @@
   box-sizing: border-box;
 }
 
-#readme-content img {
+#readme-container img {
     width: 100%;  /* Make the banner stretch to fit the page width */
     height: auto; /* Keep aspect ratio */
     display: block; /* Remove extra spacing */
