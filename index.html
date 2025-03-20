@@ -16,6 +16,7 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="styles.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
     </head>
     <body id="page-top">
     <!-- Navigation -->
@@ -43,16 +44,26 @@
         </div>
     </nav>
 
-<div id="readme-container"></div>
+        <div id="readme-container"></div>
 
 <script>
-    fetch('README.md')
-        .then(response => response.text())
-        .then(text => {
-            document.getElementById("readme-container").innerHTML =
-                `<pre style="white-space: pre-wrap;">${text}</pre>`;
-        })
-        .catch(error => console.log('Error loading README.md:', error));
+    async function loadReadme() {
+        const response = await fetch('README.md');
+        const markdownText = await response.text();
+
+        // Convert Markdown to HTML using a parser
+        const converter = new showdown.Converter();
+        const htmlContent = converter.makeHtml(markdownText);
+
+        // Inject the HTML into the page
+        document.getElementById('readme-container').innerHTML = htmlContent;
+    }
+
+    loadReadme();
 </script>
+<!-- Load Showdown Markdown Parser -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+
+
 
 </body>>

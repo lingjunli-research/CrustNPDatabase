@@ -138,6 +138,11 @@
                     { word: "Allatostatin", definition: "A family of neuropeptides that regulate juvenile hormone biosynthesis." },
                     { word: "FMRFamide", definition: "A neuropeptide involved in muscle contraction and neurotransmission." },
                     { word: "Tachykinin", definition: "A family of neuropeptides involved in pain perception and inflammation." }
+                ],
+                 tools: [
+                    { word: "MS", definition: "Mass Spectrometry." },
+                    { word: "BLAST", definition: "xxx." },
+                    { word: "xxx", definition: "xxx." }
                 ]
             };
 
@@ -173,6 +178,7 @@
             // Render glossary for each category
             renderGlossary("species", glossaryData.species);
             renderGlossary("neuropeptide-family", glossaryData.neuropeptideFamily);
+            renderGlossary("tools", glossaryData.tools);
         });
     </script>
 </head>
@@ -193,6 +199,12 @@
     <div class="glossary-category" id="neuropeptide-family">
         <h2>Neuropeptide Family</h2>
         <div class="glossary-list"></div>
+
+    <!-- Tools Category -->
+    <div class="glossary-category" id="tools">
+        <h2>Tools</h2>
+        <div class="glossary-list"></div>
+    </div>
     </div>
 </div>
 
