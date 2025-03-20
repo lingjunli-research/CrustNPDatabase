@@ -47,6 +47,14 @@
   box-sizing: border-box;
 }
 
+#readme-content img {
+    width: 100%;  /* Make the banner stretch to fit the page width */
+    height: auto; /* Keep aspect ratio */
+    display: block; /* Remove extra spacing */
+    margin: 0 auto; /* Center if necessary */
+    max-width: 1200px; /* Optional: Set a max width */
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
